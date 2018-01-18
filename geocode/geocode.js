@@ -2,7 +2,7 @@ const request = require('request');
 
 var geocodeAddress = (address, callback)=> {
 	// encodeURIComponent() adds the %20 for spaces in strings. decodeURIComponent() does the opposite
-	const encodedAddress = encodeURIComponent(address, callback);
+	const encodedAddress = encodeURIComponent(address);
 
 	request({
 		url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=AIzaSyBmmv-SC9bLvUqXoI71rVd3Z-J7TINRqxQ`,
